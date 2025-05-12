@@ -4,14 +4,11 @@ import Pricing from './pages/Pricing'
 import Login from './pages/Login'
 
 
-const basename = import.meta.env.MODE === "development" ? "/" : `/${import.meta.env.VITE_PUBLIC_URL}`;
-
-
 function App() {
 
   return (
     <>
-      <BrowserRouter basename={basename}>
+      <BrowserRouter basename={import.meta.env.VITE_PUBLIC_URL}>
         <Routes>
           <Route index path='/' element={<Login />} />
           <Route index path='/pricing' element={<Pricing />} />

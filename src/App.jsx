@@ -6,6 +6,8 @@ import Login from './pages/Login'
 
 function App() {
 
+  console.log(import.meta.env.VITE_PUBLIC_URL)
+
   return (
     <>
       <BrowserRouter basename={import.meta.env.VITE_PUBLIC_URL}>
